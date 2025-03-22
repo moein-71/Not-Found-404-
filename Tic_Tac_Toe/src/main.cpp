@@ -11,9 +11,11 @@ int main()
     bool Player1_win = false ;
     bool Player2_win = false ;
 
+    bool place_is_empty = false ;
+
     for(int i{} ; i < Game_Round ; ++i)
     {
-        bool place_is_empty = false ;
+        place_is_empty = false ;
 
         while(!place_is_empty) 
         {
@@ -51,6 +53,7 @@ int main()
 
             cout<< '\n' << "Player 2 Enter your col : " ;
             cin>> col ;
+            cout<< '\n' ;
 
             place_is_empty = Game.set_Player2(--row , --col) ;
         }
@@ -67,6 +70,44 @@ int main()
             }
         }
     }
+    
+    if(Player1_win) 
+    {
+        cout<< "Player 1 wins" << '\n' ;
+    }
+    else if(Player2_win) 
+    {
+        cout<< "Player 2 wins" << '\n' ;
+    }
+    else 
+    {
+        place_is_empty = false ;
 
-    //player 1 play one more time and game end 
+        int row , col ;
+
+        cout<< "Player 1 Enter your row : " ;
+        cin>> row ;
+
+        cout<< '\n' << "Player 1 Enter your col : " ;
+        cin>> col ;
+
+        place_is_empty = Game.set_Player1(--row , --col) ;
+
+        Game.draw() ;
+
+        if(Player1_win) 
+        {
+            cout<< "Player 1 wins" << '\n' ;
+        }
+        else if(Player2_win) 
+        {
+            cout<< "Player 2 wins" << '\n' ;
+        }
+        else 
+        {
+            cout<< "Game ended draw" << '\n' ;
+        }
+    }
+
+    return 0 ;
 }

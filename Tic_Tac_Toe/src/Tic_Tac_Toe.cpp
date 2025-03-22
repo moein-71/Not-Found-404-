@@ -4,6 +4,17 @@
 
 using namespace std ;
 
+Tic_Tac_Toe::Tic_Tac_Toe() 
+{
+    for(int i{} ; i < 3 ; ++i) 
+    {
+        for(int j{} ; j < 3 ; ++j)
+        {
+            Table[i][j] = '-' ;
+        }
+    }
+}
+
 bool Tic_Tac_Toe::set_Player1(const int & row , const int & col)
 {
     if(Table[row][col] == PLAYER_1::Player1 || Table[row][col] == PLAYER_2::Player2)
@@ -35,7 +46,19 @@ bool Tic_Tac_Toe::set_Player2(const int & row , const int & col)
         return false ;
     }
 
+    if(row < 0 || row > 2) 
+    {
+        cout<< '\n' << "your row is not logical" ;
+        return false ;
+    }
+    if(col < 0 || col > 2) 
+    {
+        cout<< '\n' << "your row is not logical" ;
+        return false ;
+    }
+
     Table[row][col] = PLAYER_2::Player2 ;
+    return true ;
 }
 
 bool Tic_Tac_Toe::check_Player1() const
@@ -107,6 +130,8 @@ bool Tic_Tac_Toe::check_Player1() const
     {
         return winner ;
     }
+
+    return false ;
 }
 
 bool Tic_Tac_Toe::check_Player2() const
@@ -166,7 +191,7 @@ bool Tic_Tac_Toe::check_Player2() const
 
     winner = true ;
 
-    for(int i{2} , j{2} ; i >= 0 ; --i , --j)
+    for(int i{0} , j{2} ; i < 3 ; ++i , --j)
     {
         if(Table[i][j] != PLAYER_2::Player2)
         {
@@ -178,10 +203,13 @@ bool Tic_Tac_Toe::check_Player2() const
     {
         return winner ;
     }
+
+    return false ;
 }
 
 void Tic_Tac_Toe::draw() const
 {
+    cout<< '\n' << "---------" << '\n' ;
     for(int i{} ; i < 3 ; ++i)
     {
         cout<< Table[i][0] << " | " << Table[i][1] << " | " << Table[i][2] ;

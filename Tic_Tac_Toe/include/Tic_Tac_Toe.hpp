@@ -7,6 +7,8 @@ class Tic_Tac_Toe
 {
     public :
 
+        Tic_Tac_Toe() ;
+
         bool set_Player1(const int & row , const int & col) ;
         bool set_Player2(const int & row ,const int & col) ;
 
