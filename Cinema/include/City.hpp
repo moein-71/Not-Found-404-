@@ -25,6 +25,15 @@ class City
         void reserve_Theater_3_movie_1(const int & row , const int & col) ;
         void reserve_Theater_3_movie_2(const int & row , const int & col) ;
 
+        bool check_Theater_1_movie_1() const ;
+        bool check_Theater_1_movie_2() const ;
+
+        bool check_Theater_2_movie_1() const ;
+        bool check_Theater_2_movie_2() const ;
+
+        bool check_Theater_3_movie_1() const ;
+        bool check_Theater_3_movie_2() const ;
+
         void draw_Theater_1_movie_1() const ;
         void draw_Theater_1_movie_2() const ;
 
@@ -33,6 +42,12 @@ class City
 
         void draw_Theater_3_movie_1() const ;
         void draw_Theater_3_movie_2() const ;
+
+        void show_menu() const ;
+
+        void show_movie_menu_Theater_1() const ;
+        void show_movie_menu_Theater_2() const ;
+        void show_movie_menu_Theater_3() const ;
 
     private :
 

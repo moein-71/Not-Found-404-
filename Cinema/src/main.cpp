@@ -12,12 +12,7 @@ int main()
     {
         int order ;
 
-        cout<< "Welcome to the Cinema Reservation\n" ;
-        cout<< "1. Theater 1\n" ;
-        cout<< "2. Theater 2\n" ;
-        cout<< "3. Theater 3\n" ;
-        cout<< "4. Exit\n" ;
-        cout<< "Select your Theater (or Exit) : " ;
+        Theater_Table.show_menu() ;
 
         cin>> order ;
         cout<< '\n' ;
@@ -32,11 +27,7 @@ int main()
                 {
                     int movie ;
 
-                    cout<< "Chose your movie :\n" ;
-                    cout<< "1. movie 1 : " << Theater_Table.get_Teather_1_movie_1() << '\n' ;
-                    cout<< "2. movie 2 : " << Theater_Table.get_Teather_1_movie_2() << '\n' ;
-                    cout<< "3. back\n" ;
-                    cout<< "which movie : " ;
+                    Theater_Table.show_movie_menu_Theater_1() ;
 
                     cin>> movie ;
                     cout<< '\n' ;
@@ -48,6 +39,12 @@ int main()
                             cout<< "movie 1 : " << Theater_Table.get_Teather_1_movie_1() << '\n' ;
                             
                             Theater_Table.draw_Theater_1_movie_1() ;
+
+                            if(!Theater_Table.check_Theater_1_movie_1()) 
+                            {
+                                cout<< "This Theater is full\n" ;
+                                break ;
+                            }
 
                             int row , col ;
 
@@ -65,6 +62,12 @@ int main()
                             cout<< "movie 2 : " << Theater_Table.get_Teather_1_movie_2() << '\n' ;
                                 
                             Theater_Table.draw_Theater_1_movie_2() ;
+
+                            if(!Theater_Table.check_Theater_1_movie_2()) 
+                            {
+                                cout<< "This Theater is full\n" ;
+                                break ;
+                            }
 
                             int row , col ;
 
@@ -98,11 +101,7 @@ int main()
                 {
                     int movie ;
 
-                    cout<< "Chose your movie :\n" ;
-                    cout<< "1. movie 1 : " << Theater_Table.get_Teather_2_movie_1() << '\n' ;
-                    cout<< "2. movie 2 : " << Theater_Table.get_Teather_2_movie_2() << '\n' ;
-                    cout<< "3. back\n" ;
-                    cout<< "which movie : " ;
+                    Theater_Table.show_movie_menu_Theater_2() ;
 
                     cin>> movie ;
                     cout<< '\n' ;
@@ -114,6 +113,12 @@ int main()
                             cout<< "movie 1 : " << Theater_Table.get_Teather_2_movie_1() << '\n' ;
                             
                             Theater_Table.draw_Theater_2_movie_1() ;
+
+                            if(!Theater_Table.check_Theater_2_movie_1()) 
+                            {
+                                cout<< "This Theater is full\n" ;
+                                break ;
+                            }
 
                             int row , col ;
 
@@ -131,6 +136,12 @@ int main()
                             cout<< "movie 2 : " << Theater_Table.get_Teather_2_movie_2() << '\n' ;
                                 
                             Theater_Table.draw_Theater_2_movie_2() ;
+
+                            if(!Theater_Table.check_Theater_2_movie_2()) 
+                            {
+                                cout<< "This Theater is full\n" ;
+                                break ;
+                            }
 
                             int row , col ;
 
@@ -164,11 +175,7 @@ int main()
                 {
                     int movie ;
 
-                    cout<< "Chose your movie :\n" ;
-                    cout<< "1. movie 1 : " << Theater_Table.get_Teather_3_movie_1() << '\n' ;
-                    cout<< "2. movie 2 : " << Theater_Table.get_Teather_3_movie_2() << '\n' ;
-                    cout<< "3. back\n" ;
-                    cout<< "which movie : " ;
+                    Theater_Table.show_movie_menu_Theater_3() ;
 
                     cin>> movie ;
                     cout<< '\n' ;
@@ -180,6 +187,12 @@ int main()
                             cout<< "movie 1 : " << Theater_Table.get_Teather_3_movie_1() << '\n' ;
                             
                             Theater_Table.draw_Theater_3_movie_1() ;
+
+                            if(!Theater_Table.check_Theater_3_movie_1()) 
+                            {
+                                cout<< "This Theater is full\n" ;
+                                break ;
+                            }
 
                             int row , col ;
 
@@ -197,6 +210,12 @@ int main()
                             cout<< "movie 2 : " << Theater_Table.get_Teather_3_movie_2() << '\n' ;
                                 
                             Theater_Table.draw_Theater_3_movie_2() ;
+
+                            if(!Theater_Table.check_Theater_3_movie_2()) 
+                            {
+                                cout<< "This Theater is full\n" ;
+                                break ;
+                            }
 
                             int row , col ;
 
