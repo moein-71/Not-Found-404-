@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/app.dir/home/moein/work/pishrafte/nouroz/Cinema/src/main.cpp.o CMakeFiles/app.dir/home/moein/work/pishrafte/nouroz/Cinema/src/City.cpp.o -o app 
