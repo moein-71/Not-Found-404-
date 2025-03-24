@@ -1,3 +1,0 @@
-/home/moein/work/pishrafte/nouroz/Tic_Tac_Toe/build/CMakeFiles/app.dir
-/home/moein/work/pishrafte/nouroz/Tic_Tac_Toe/build/CMakeFiles/edit_cache.dir
-/home/moein/work/pishrafte/nouroz/Tic_Tac_Toe/build/CMakeFiles/rebuild_cache.dir
